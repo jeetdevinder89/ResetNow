@@ -77,7 +77,7 @@ export default function AboutPage() {
             <li><strong>Dark Mode:</strong> Comfortable viewing in any lighting condition</li>
             <li><strong>Favorites:</strong> Star your most frequently-used platforms for quick access</li>
             <li><strong>Copy to Clipboard:</strong> Quickly copy any password reset link</li>
-            <li><strong>100% Free:</strong> No login required, no data collection, no ads</li>
+            <li><strong>100% Free:</strong> No login required, no data collection, supported by ads</li>
           </ul>
         </section>
 
