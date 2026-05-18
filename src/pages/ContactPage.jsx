@@ -7,15 +7,15 @@ import styles from './InfoPage.module.css'
 export default function ContactPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      return localStorage.getItem('resetnow_darkmode') === 'true' || true
     } catch {
       return true
     }
   })
 
   useEffect(() => {
-    document.title = 'Contact PassGuard | Get in Touch'
-    const description = 'Contact PassGuard to report broken links, suggest new platforms, or ask questions about our service.'
+    document.title = 'Contact ResetNow | Get in Touch'
+    const description = 'Contact ResetNow to report broken links, suggest new platforms, or ask questions about our service.'
     let meta = document.querySelector('meta[name="description"]')
     if (!meta) {
       meta = document.createElement('meta')
@@ -26,7 +26,7 @@ export default function ContactPage() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -47,7 +47,7 @@ export default function ContactPage() {
           <section>
             <h2>Get in Touch</h2>
             <p>
-              Have a question about PassGuard? Found a broken password reset link? Or would you like to suggest a new platform we should add? We'd love to hear from you!
+              Have a question about ResetNow? Found a broken password reset link? Or would you like to suggest a new platform we should add? We'd love to hear from you!
             </p>
           </section>
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
               You can also reach us directly via email:
             </p>
             <p>
-              <a href="mailto:support@passguard.dev" className={styles.emailLink}>support@passguard.dev</a>
+              <a href="mailto:support@resetnow.dev" className={styles.emailLink}>support@resetnow.dev</a>
             </p>
             <p>
               When emailing, please include:
@@ -96,14 +96,14 @@ export default function ContactPage() {
           <section>
             <h2>Response Time</h2>
             <p>
-              We aim to respond to all inquiries within 24-48 hours. Please note that PassGuard is maintained by a small team of volunteers, so there may be times when responses take a bit longer.
+              We aim to respond to all inquiries within 24-48 hours. Please note that ResetNow is maintained by a small team of volunteers, so there may be times when responses take a bit longer.
             </p>
           </section>
 
           <section>
             <h2>Social Media</h2>
             <p>
-              While PassGuard primarily communicates via email, you can also follow our updates on GitHub for the latest development news and feature releases.
+              While ResetNow primarily communicates via email, you can also follow our updates on GitHub for the latest development news and feature releases.
             </p>
           </section>
 

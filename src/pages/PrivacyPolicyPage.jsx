@@ -7,15 +7,15 @@ import styles from './InfoPage.module.css'
 export default function PrivacyPolicyPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      return localStorage.getItem('resetnow_darkmode') === 'true' || true
     } catch {
       return true
     }
   })
 
   useEffect(() => {
-    document.title = 'Privacy Policy | PassGuard'
-    const description = 'PassGuard Privacy Policy - Learn how we protect your data and respect your privacy.'
+    document.title = 'Privacy Policy | ResetNow'
+    const description = 'ResetNow Privacy Policy - Learn how we protect your data and respect your privacy.'
     let meta = document.querySelector('meta[name="description"]')
     if (!meta) {
       meta = document.createElement('meta')
@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 

@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className={styles.footer}>
       <div className={styles.content}>
         <div className={styles.section}>
-          <h4>PassGuard</h4>
+          <h4>ResetNow</h4>
           <p>Direct password reset links for 48+ popular platforms.</p>
         </div>
 
@@ -33,7 +33,7 @@ export default function Footer() {
         <div className={styles.section}>
           <h4>Open Source</h4>
           <p>
-            <a href="https://github.com/jeetdevinder89/PassGuard" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/jeetdevinder89/ResetNow" target="_blank" rel="noopener noreferrer">
               View on GitHub
             </a>
           </p>
@@ -41,7 +41,7 @@ export default function Footer() {
       </div>
 
       <div className={styles.bottom}>
-        <p>&copy; 2026 PassGuard. All rights reserved. | No login required. No data stored. Free forever.</p>
+        <p>&copy; 2026 ResetNow. All rights reserved. | No login required. No data stored. Free forever.</p>
       </div>
     </footer>
   )

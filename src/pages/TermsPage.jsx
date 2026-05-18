@@ -7,15 +7,15 @@ import styles from './InfoPage.module.css'
 export default function TermsPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      return localStorage.getItem('resetnow_darkmode') === 'true' || true
     } catch {
       return true
     }
   })
 
   useEffect(() => {
-    document.title = 'Terms of Service | PassGuard'
-    const description = 'PassGuard Terms of Service - Read our terms and conditions for using PassGuard.'
+    document.title = 'Terms of Service | ResetNow'
+    const description = 'ResetNow Terms of Service - Read our terms and conditions for using ResetNow.'
     let meta = document.querySelector('meta[name="description"]')
     if (!meta) {
       meta = document.createElement('meta')
@@ -26,7 +26,7 @@ export default function TermsPage() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -119,7 +119,7 @@ export default function TermsPage() {
         <section>
           <h2>6. Limitations of Liability</h2>
           <p>
-            In no event shall PassGuard or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on PassGuard, even if PassGuard or a PassGuard authorized representative has been notified orally or in writing of the possibility of such damage.
+            In no event shall ResetNow or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on ResetNow, even if ResetNow or a ResetNow authorized representative has been notified orally or in writing of the possibility of such damage.
           </p>
         </section>
 

@@ -20,7 +20,7 @@ export default function PlatformSeoPage() {
   const steps = useMemo(() => (site ? getRecoverySteps(site) : []), [site])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -31,7 +31,7 @@ export default function PlatformSeoPage() {
   useEffect(() => {
     if (!site) return
 
-    document.title = `${site.name} Password Reset Guide | PassGuard`
+    document.title = `${site.name} Password Reset Guide | ResetNow`
 
     const description = `Reset your ${site.name} password safely with step-by-step guidance and the official recovery link.`
     let meta = document.querySelector('meta[name="description"]')
@@ -88,7 +88,7 @@ export default function PlatformSeoPage() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       <main style={{ maxWidth: 900, margin: '34px auto 70px', padding: 20 }}>
-        <Link to="/" style={{ color: 'var(--muted)' }}>Back to PassGuard</Link>
+        <Link to="/" style={{ color: 'var(--muted)' }}>Back to ResetNow</Link>
 
         <section style={{ marginTop: 18, background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 12, padding: 20 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>

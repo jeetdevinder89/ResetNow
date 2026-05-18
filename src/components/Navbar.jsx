@@ -5,7 +5,7 @@ export default function Navbar({ isDarkMode, onToggleDarkMode }) {
   return (
     <nav className={styles.nav}>
       <div className={styles.logo}>
-        <span className={styles.logoIcon}>PG</span> PassGuard
+        <span className={styles.logoIcon}>RN</span> ResetNow
       </div>
       <div className={styles.right}>
         <button

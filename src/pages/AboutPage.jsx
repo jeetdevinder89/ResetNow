@@ -7,15 +7,15 @@ import styles from './InfoPage.module.css'
 export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      return localStorage.getItem('resetnow_darkmode') === 'true' || true
     } catch {
       return true
     }
   })
 
   useEffect(() => {
-    document.title = 'About PassGuard | Direct Password Reset Links for 48+ Platforms'
-    const description = 'Learn about PassGuard - a free tool that provides direct password reset links for your favorite platforms.'
+    document.title = 'About ResetNow | Direct Password Reset Links for 48+ Platforms'
+    const description = 'Learn about ResetNow - a free tool that provides direct password reset links for your favorite platforms.'
     let meta = document.querySelector('meta[name="description"]')
     if (!meta) {
       meta = document.createElement('meta')
@@ -26,7 +26,7 @@ export default function AboutPage() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -81,7 +81,7 @@ export default function AboutPage() {
         <section>
           <h2>Privacy & Security</h2>
           <p>
-            At PassGuard, your privacy is our priority:
+            At ResetNow, your privacy is our priority:
           </p>
           <ul>
             <li>We do not store any of your personal information</li>

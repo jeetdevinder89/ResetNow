@@ -96,7 +96,7 @@ PassGuard/
 
 ## 🔍 Supported Platforms
 
-PassGuard supports password reset for 48+ platforms across categories:
+ResetNow supports password reset for 48+ platforms across categories:
 
 - **Social Media**: Facebook, Instagram, Twitter/X, TikTok, Snapchat, LinkedIn, Pinterest, Reddit, and more
 - **Finance**: PayPal, Stripe, Square, Robinhood, E*TRADE, and more
@@ -173,7 +173,7 @@ To add a new platform:
 
 ## 📄 License
 
-MIT License - feel free to use PassGuard in your own projects
+MIT License - feel free to use ResetNow in your own projects
 
 ## 🙋 Support
 

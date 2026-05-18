@@ -50,7 +50,7 @@ export default function App() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem('passguard_darkmode', isDarkMode)
+    localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
 
@@ -63,7 +63,7 @@ export default function App() {
       const updated = prev.includes(siteId)
         ? prev.filter(id => id !== siteId)
         : [...prev, siteId]
-      localStorage.setItem('passguard_favorites', JSON.stringify(updated))
+      localStorage.setItem('resetnow_favorites', JSON.stringify(updated))
       return updated
     })
   }
