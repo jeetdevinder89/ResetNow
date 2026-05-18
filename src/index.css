@@ -99,7 +99,7 @@ p {
   background: var(--muted);
 }
 
-/* ── Sidebar Ads: Flow beside grid on wide screens ────────────────────── */
+/* ── Sidebar Ads: Sticky, scroll with page ──────────────────────────────── */
 .ads-grid-wrapper {
   display: flex;
   gap: 16px;
@@ -113,6 +113,9 @@ p {
   display: none;
   width: 160px;
   flex-shrink: 0;
+  position: sticky;
+  top: 80px; /* stick below navbar ~60px + 20px padding */
+  height: fit-content;
 }
 
 .sidebar-ad--left  { order: -1; }
