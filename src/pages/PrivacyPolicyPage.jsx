@@ -66,7 +66,7 @@ export default function PrivacyPolicyPage() {
             <li>Browsing history or user activity data</li>
             <li>Device information or IP addresses</li>
             <li>Geolocation data</li>
-            <li>Cookies for tracking or analytics</li>
+            <li>Cookies for tracking or behavioural analytics</li>
           </ul>
 
           <h3>1.2 Information Stored Locally</h3>
@@ -122,9 +122,25 @@ export default function PrivacyPolicyPage() {
             ResetNow does not use Google Analytics, Mixpanel, or any other analytics services. We do not track your behavior or usage patterns.
           </p>
 
-          <h3>3.3 No Advertising</h3>
+          <h3>3.3 Google AdSense Advertising</h3>
           <p>
-            ResetNow is advertisement-free. We do not sell data to advertisers or use your information for targeted advertising.
+            ResetNow uses <strong>Google AdSense</strong> to display advertisements. Google AdSense uses cookies to serve ads based on your prior visits to this or other websites. You can opt out of personalised advertising by visiting{' '}
+            <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> or{' '}
+            <a href="https://www.aboutads.info" target="_blank" rel="noopener noreferrer">aboutads.info</a>.
+          </p>
+          <p>
+            Google's use of advertising cookies enables it and its partners to serve ads based on your visit to our site and/or other sites on the Internet. For more information, see{' '}
+            <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google's advertising policy</a>.
+          </p>
+
+          <h3>3.4 Cookies We Use</h3>
+          <p>We use the following types of cookies:</p>
+          <ul>
+            <li><strong>Functional cookies:</strong> Store your dark/light mode preference and favourited platforms (first-party, local storage only).</li>
+            <li><strong>Advertising cookies:</strong> Set by Google AdSense to deliver relevant advertisements and track ad performance (third-party).</li>
+          </ul>
+          <p>
+            You can manage or disable cookies through your browser settings at any time. Note that disabling advertising cookies will not remove ads — it will make them less relevant to you.
           </p>
         </section>
 
@@ -181,13 +197,23 @@ export default function PrivacyPolicyPage() {
         </section>
 
         <section>
-          <h2>9. Legal Basis</h2>
+          <h2>9. Cookie Consent</h2>
+          <p>
+            When you first visit ResetNow, you will be shown a cookie consent banner. By clicking <strong>Accept All</strong>, you consent to the use of all cookies described in this policy, including advertising cookies set by Google AdSense. If you click <strong>Decline</strong>, only essential functional cookies will be used.
+          </p>
+          <p>
+            You can withdraw your consent at any time by clearing your browser's local storage or adjusting your browser's cookie settings.
+          </p>
+        </section>
+
+        <section>
+          <h2>10. Legal Basis</h2>
           <p>
             Under GDPR, CCPA, and other privacy regulations, we process data based on:
           </p>
           <ul>
             <li><strong>Legitimate Interest:</strong> Maintaining our service and responding to inquiries</li>
-            <li><strong>Consent:</strong> When you contact us, you consent to us processing your email</li>
+            <li><strong>Consent:</strong> When you contact us, or accept our cookie banner, you consent to us processing that data</li>
           </ul>
         </section>
       </div>

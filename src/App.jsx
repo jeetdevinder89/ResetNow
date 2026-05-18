@@ -5,6 +5,8 @@ import StatsRow from './components/StatsRow'
 import ResultsGrid from './components/ResultsGrid'
 import PlatformDrawer from './components/PlatformDrawer'
 import Footer from './components/Footer'
+import CookieBanner from './components/CookieBanner'
+import AdSlot from './components/AdSlot'
 import { SERVICE_DB, CATEGORIES } from './data/services'
 
 export default function App() {
@@ -118,6 +120,10 @@ export default function App() {
         total={SERVICE_DB.length}
         categories={CATEGORIES.length - 1}
       />
+      {/* Ad slot — below hero, above grid */}
+      <div style={{ maxWidth: 1020, margin: '0 auto 8px', padding: '0 24px' }}>
+        <AdSlot slot="1234567890" format="horizontal" label="Top Banner Ad" style={{ minHeight: 90 }} />
+      </div>
       <ResultsGrid
         sites={filtered}
         categories={CATEGORIES}
@@ -131,6 +137,10 @@ export default function App() {
         favorites={favorites}
         onToggleFavorite={toggleFavorite}
       />
+      {/* Ad slot — above footer */}
+      <div style={{ maxWidth: 1020, margin: '0 auto 40px', padding: '0 24px' }}>
+        <AdSlot slot="0987654321" format="horizontal" label="Bottom Banner Ad" style={{ minHeight: 90 }} />
+      </div>
       <PlatformDrawer
         site={selectedSite}
         status={selectedSite ? linkStatuses[selectedSite.id] : null}
@@ -138,6 +148,7 @@ export default function App() {
         onClose={() => setSelectedSite(null)}
       />
       <Footer />
+      <CookieBanner />
     </>
   )
 }

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Block dist build artifacts if served incorrectly
+Disallow: /src/
+
+Sitemap: https://resetnow.dev/sitemap.xml

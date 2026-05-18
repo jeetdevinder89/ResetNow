@@ -1,0 +1,14 @@
+# ads.txt — AdSense Publisher Authorization
+# ============================================================
+# IMPORTANT: Replace pub-XXXXXXXXXXXXXXXX with your actual
+# Google AdSense Publisher ID before deploying.
+#
+# How to find your Publisher ID:
+#   1. Sign in to Google AdSense: https://www.google.com/adsense
+#   2. Go to Account → Account information
+#   3. Copy the "Publisher ID" (starts with pub-)
+#
+# Then replace the line below with:
+# google.com, pub-YOUR_REAL_ID_HERE, DIRECT, f08c47fec0942fa0
+# ============================================================
+google.com, pub-XXXXXXXXXXXXXXXX, DIRECT, f08c47fec0942fa0

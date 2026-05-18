@@ -87,7 +87,7 @@ export default function AboutPage() {
           <ul>
             <li>We do not store any of your personal information</li>
             <li>No login or registration is required</li>
-            <li>No cookies are used for tracking</li>
+            <li>No behavioural tracking or analytics cookies</li>
             <li>No analytics or user tracking</li>
             <li>All operations are performed locally in your browser</li>
             <li>The source code is open for transparency</li>

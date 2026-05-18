@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Static pages -->
+  <url>
+    <loc>https://resetnow.dev/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resetnow.dev/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://resetnow.dev/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://resetnow.dev/privacy-policy</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://resetnow.dev/terms</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Platform guide pages -->
+  <url><loc>https://resetnow.dev/platform/facebook</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/instagram</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/twitter</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/linkedin</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/reddit</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/snapchat</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/tiktok</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/pinterest</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/discord</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/twitch</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/google</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/microsoft</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/apple</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/slack</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/notion</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/zoom</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/dropbox</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/amazon</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/ebay</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/etsy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/walmart</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/aliexpress</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/paypal</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/coinbase</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/robinhood</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/netflix</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/spotify</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/youtube</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/disneyplus</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/hulu</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/github</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://resetnow.dev/platform/stackoverflow</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/gitlab</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/atlassian</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/adobe</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/canva</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/steam</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/epicgames</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/ea</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/playstation</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/booking</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/airbnb</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/uber</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://resetnow.dev/platform/doordash</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/ubereats</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/myfitnesspal</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/medium</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://resetnow.dev/platform/quora</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+</urlset>
