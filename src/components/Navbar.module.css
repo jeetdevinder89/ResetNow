@@ -34,10 +34,12 @@
   font-size: 0.75rem;
   font-weight: 900;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  color: white;
-  width: 36px;
-  height: 36px;
-  border-radius: 10px;
+  color: white !important;
+  -webkit-text-fill-color: white !important;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
