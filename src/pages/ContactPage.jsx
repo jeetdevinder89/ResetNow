@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import PageAdsLayout from '../components/PageAdsLayout'
 import styles from './InfoPage.module.css'
 
 export default function ContactPage() {
@@ -39,11 +40,12 @@ export default function ContactPage() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       
-      <div className={styles.container}>
-        <Link to="/" className={styles.backLink}>← Back to Home</Link>
-        
-        <div className={styles.content}>
-          <h1>Contact Us</h1>
+      <PageAdsLayout>
+        <div className={styles.container}>
+          <Link to="/" className={styles.backLink}>← Back to Home</Link>
+          
+          <div className={styles.content}>
+            <h1>Contact Us</h1>
           
           <section>
             <h2>Get in Touch</h2>
@@ -114,8 +116,9 @@ export default function ContactPage() {
               We will never share your email address or contact information with third parties. Your data is only used to respond to your inquiry. Please see our <Link to="/privacy-policy">Privacy Policy</Link> for more details.
             </p>
           </section>
+          </div>
         </div>
-      </div>
+      </PageAdsLayout>
 
       <Footer />
     </>

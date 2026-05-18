@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import PageAdsLayout from '../components/PageAdsLayout'
 import styles from './InfoPage.module.css'
 
 export default function TermsPage() {
@@ -38,11 +39,12 @@ export default function TermsPage() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       
-      <div className={styles.container}>
-        <Link to="/" className={styles.backLink}>← Back to Home</Link>
-        
-        <div className={styles.content}>
-          <h1>Terms of Service</h1>
+      <PageAdsLayout>
+        <div className={styles.container}>
+          <Link to="/" className={styles.backLink}>← Back to Home</Link>
+          
+          <div className={styles.content}>
+            <h1>Terms of Service</h1>
         <p className={styles.lastUpdated}>Last Updated: May 2026</p>
         
         <section>
@@ -185,8 +187,9 @@ export default function TermsPage() {
             Or visit our <Link to="/contact">Contact page</Link>.
           </p>
         </section>
-      </div>
-    </div>
+          </div>
+        </div>
+      </PageAdsLayout>
 
     <Footer />
     </>

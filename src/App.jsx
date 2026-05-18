@@ -1,4 +1,4 @@
-﻿import { useState, useMemo, useEffect } from 'react'
+﻿import { useState, useMemo, useEffect, useRef } from 'react'
 import Navbar from './components/Navbar'
 import SearchBar from './components/SearchBar'
 import StatsRow from './components/StatsRow'
@@ -31,6 +31,8 @@ export default function App() {
       return true
     }
   })
+  const adsGridRef = useRef(null)
+  const [adOffsets, setAdOffsets] = useState({ left: 0, right: 0 })
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim()
@@ -57,6 +59,44 @@ export default function App() {
     localStorage.setItem('resetnow_darkmode', isDarkMode)
     document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
   }, [isDarkMode])
+
+  useEffect(() => {
+    const measureAdOffsets = () => {
+      const wrapper = adsGridRef.current
+      if (!wrapper) return false
+
+      const cards = Array.from(wrapper.querySelectorAll('[data-site-card="true"]'))
+      if (cards.length === 0) return false
+
+      const facebookCard = wrapper.querySelector('[data-site-name="Facebook"]')
+      const twitterCard = wrapper.querySelector('[data-site-name="X / Twitter"]')
+
+      const leftAnchor = facebookCard || cards[0]
+      const rightAnchor = twitterCard || cards[2] || cards[0]
+
+      const wrapperTop = wrapper.getBoundingClientRect().top
+      const left = Math.max(0, Math.round(leftAnchor.getBoundingClientRect().top - wrapperTop - 10))
+      const right = Math.max(0, Math.round(rightAnchor.getBoundingClientRect().top - wrapperTop - 10))
+
+      setAdOffsets({ left, right })
+      return true
+    }
+
+    const rafId = requestAnimationFrame(() => {
+      measureAdOffsets()
+    })
+    const timeoutId = setTimeout(() => {
+      measureAdOffsets()
+    }, 120)
+
+    window.addEventListener('resize', measureAdOffsets)
+
+    return () => {
+      cancelAnimationFrame(rafId)
+      clearTimeout(timeoutId)
+      window.removeEventListener('resize', measureAdOffsets)
+    }
+  }, [filtered])
 
   function handleCategory(cat) {
     setActiveCategory(cat)
@@ -126,8 +166,8 @@ export default function App() {
       </div>
 
       {/* Grid with left/right sidebar ads */}
-      <div className="ads-grid-wrapper">
-        <div className="sidebar-ad sidebar-ad--left">
+      <div className="ads-grid-wrapper" ref={adsGridRef}>
+        <div className="sidebar-ad sidebar-ad--left" style={{ marginTop: adOffsets.left }}>
           <AdSlot slot="1111111111" format="vertical" label="Left Sidebar Ad" style={{ width: 160, minHeight: 600 }} />
         </div>
 
@@ -151,7 +191,7 @@ export default function App() {
           </div>
         </div>
 
-        <div className="sidebar-ad sidebar-ad--right">
+        <div className="sidebar-ad sidebar-ad--right" style={{ marginTop: adOffsets.right }}>
           <AdSlot slot="2222222222" format="vertical" label="Right Sidebar Ad" style={{ width: 160, minHeight: 600 }} />
         </div>
       </div>

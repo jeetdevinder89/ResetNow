@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import PageAdsLayout from '../components/PageAdsLayout'
 import styles from './InfoPage.module.css'
 
 export default function PrivacyPolicyPage() {
@@ -39,11 +40,12 @@ export default function PrivacyPolicyPage() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       
-      <div className={styles.container}>
-        <Link to="/" className={styles.backLink}>← Back to Home</Link>
-        
-        <div className={styles.content}>
-          <h1>Privacy Policy</h1>
+      <PageAdsLayout>
+        <div className={styles.container}>
+          <Link to="/" className={styles.backLink}>← Back to Home</Link>
+          
+          <div className={styles.content}>
+            <h1>Privacy Policy</h1>
         <p className={styles.lastUpdated}>Last Updated: May 2026</p>
         
         <section>
@@ -216,8 +218,9 @@ export default function PrivacyPolicyPage() {
             <li><strong>Consent:</strong> When you contact us, or accept our cookie banner, you consent to us processing that data</li>
           </ul>
         </section>
-      </div>
-    </div>
+          </div>
+        </div>
+      </PageAdsLayout>
 
     <Footer />
     </>

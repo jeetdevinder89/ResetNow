@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import PageAdsLayout from '../components/PageAdsLayout'
 import styles from './InfoPage.module.css'
 
 export default function AboutPage() {
@@ -39,11 +40,12 @@ export default function AboutPage() {
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       
-      <div className={styles.container}>
-        <Link to="/" className={styles.backLink}>← Back to Home</Link>
-        
-        <div className={styles.content}>
-          <h1>About ResetNow</h1>
+      <PageAdsLayout>
+        <div className={styles.container}>
+          <Link to="/" className={styles.backLink}>← Back to Home</Link>
+          
+          <div className={styles.content}>
+            <h1>About ResetNow</h1>
         
         <section>
           <h2>Our Mission</h2>
@@ -130,8 +132,9 @@ export default function AboutPage() {
             Have a question or found a broken link? Visit our <Link to="/contact">Contact page</Link> to get in touch, or check our <Link to="/privacy-policy">Privacy Policy</Link> and <Link to="/terms">Terms of Service</Link>.
           </p>
         </section>
-      </div>
-    </div>
+          </div>
+        </div>
+      </PageAdsLayout>
 
     <Footer />
     </>

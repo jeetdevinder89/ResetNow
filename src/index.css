@@ -114,12 +114,17 @@ p {
   width: 160px;
   flex-shrink: 0;
   position: sticky;
-  top: 80px; /* stick below navbar ~60px + 20px padding */
+  top: 80px;
   height: fit-content;
 }
 
-.sidebar-ad--left  { order: -1; }
-.sidebar-ad--right { order: 1; }
+.sidebar-ad--left  { 
+  order: -1;
+}
+
+.sidebar-ad--right { 
+  order: 1;
+}
 
 .grid-and-ads {
   flex: 1;

@@ -1,0 +1,54 @@
+.topBanner {
+  max-width: 1020px;
+  margin: 20px auto 10px;
+  padding: 0 24px;
+}
+
+.layout {
+  display: flex;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  align-items: flex-start;
+}
+
+.mainColumn {
+  flex: 1;
+  min-width: 0;
+}
+
+.sideAd {
+  display: none;
+  width: 160px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.left {
+  order: -1;
+}
+
+.right {
+  order: 1;
+}
+
+.bottomBanner {
+  margin-top: 24px;
+}
+
+@media (min-width: 1380px) {
+  .sideAd {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  .topBanner,
+  .layout {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

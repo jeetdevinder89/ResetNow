@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom'
 import * as SiIcons from 'react-icons/si'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
+import PageAdsLayout from '../components/PageAdsLayout'
 import { SERVICE_DB } from '../data/services'
 import { getRecoverySteps } from '../data/recoverySteps'
 
@@ -88,8 +89,9 @@ export default function PlatformSeoPage() {
   return (
     <>
       <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
-      <main style={{ maxWidth: 900, margin: '34px auto 70px', padding: 20 }}>
-        <Link to="/" style={{ color: 'var(--muted)' }}>Back to ResetNow</Link>
+      <PageAdsLayout>
+        <main style={{ maxWidth: 900, margin: '34px auto 0', padding: 20 }}>
+          <Link to="/" style={{ color: 'var(--muted)' }}>Back to ResetNow</Link>
 
         <section style={{ marginTop: 18, background: 'var(--card)', border: '1px solid var(--border)', borderRadius: 12, padding: 20 }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
@@ -117,8 +119,9 @@ export default function PlatformSeoPage() {
           <ol style={{ marginLeft: 20, display: 'grid', gap: 9, lineHeight: 1.5 }}>
             {steps.map((step, idx) => <li key={idx}>{step}</li>)}
           </ol>
-        </section>
-      </main>
+          </section>
+        </main>
+      </PageAdsLayout>
       <Footer />
     </>
   )

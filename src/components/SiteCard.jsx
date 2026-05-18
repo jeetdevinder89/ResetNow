@@ -27,7 +27,7 @@ export default function SiteCard({ site, status, onValidate, onOpenDetails, isFa
   }
 
   return (
-    <div className={styles.card}>
+    <div className={styles.card} data-site-card="true" data-site-name={site.name}>
       <div className={styles.header}>
         <div className={styles.top}>
           <div className={styles.icon} style={{ background: site.color }}>
