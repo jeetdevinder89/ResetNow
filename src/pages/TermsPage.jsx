@@ -48,14 +48,14 @@ export default function TermsPage() {
         <section>
           <h2>1. Acceptance of Terms</h2>
           <p>
-            By accessing and using PassGuard (the "Service"), you accept and agree to be bound by the terms, conditions, and notices contained herein. If you do not agree to abide by the above, please do not use this service.
+            By accessing and using ResetNow (the "Service"), you accept and agree to be bound by the terms, conditions, and notices contained herein. If you do not agree to abide by the above, please do not use this service.
           </p>
         </section>
 
         <section>
           <h2>2. Use License</h2>
           <p>
-            PassGuard grants you a limited, non-exclusive, non-transferable license to use the Service for private, personal, and non-commercial purposes. You may not:
+            ResetNow grants you a limited, non-exclusive, non-transferable license to use the Service for private, personal, and non-commercial purposes. You may not:
           </p>
           <ul>
             <li>Modify or copy the materials (including HTML and publishing format)</li>
@@ -70,7 +70,7 @@ export default function TermsPage() {
         <section>
           <h2>3. Disclaimer of Warranties</h2>
           <p>
-            The materials on PassGuard are provided on an 'as is' basis. PassGuard makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
+            The materials on ResetNow are provided on an 'as is' basis. ResetNow makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.
           </p>
         </section>
 
@@ -79,12 +79,12 @@ export default function TermsPage() {
           
           <h3>4.1 Accuracy of Information</h3>
           <p>
-            PassGuard provides links to password reset pages for various platforms. While we strive to maintain accurate and up-to-date information, we cannot guarantee that all links are correct or functional at all times. Platforms may change their URLs or functionality without notice.
+            ResetNow provides links to password reset pages for various platforms. While we strive to maintain accurate and up-to-date information, we cannot guarantee that all links are correct or functional at all times. Platforms may change their URLs or functionality without notice.
           </p>
 
           <h3>4.2 Use At Your Own Risk</h3>
           <p>
-            When you click a password reset link, you are leaving PassGuard and visiting a third-party website. We are not responsible for:
+            When you click a password reset link, you are leaving ResetNow and visiting a third-party website. We are not responsible for:
           </p>
           <ul>
             <li>The content, accuracy, or functionality of third-party websites</li>
@@ -95,7 +95,7 @@ export default function TermsPage() {
 
           <h3>4.3 Third-Party Websites</h3>
           <p>
-            PassGuard is not affiliated with, endorsed by, or responsible for any third-party websites. Each platform's website is governed by its own terms of service and privacy policy. We recommend reviewing those policies before resetting your password.
+            ResetNow is not affiliated with, endorsed by, or responsible for any third-party websites. Each platform's website is governed by its own terms of service and privacy policy. We recommend reviewing those policies before resetting your password.
           </p>
         </section>
 
@@ -112,7 +112,7 @@ export default function TermsPage() {
             <li>Verify that you are on the legitimate website before entering credentials</li>
           </ul>
           <p>
-            PassGuard is not responsible for unauthorized access to your accounts or accounts on third-party platforms.
+            ResetNow is not responsible for unauthorized access to your accounts or accounts on third-party platforms.
           </p>
         </section>
 
@@ -126,35 +126,35 @@ export default function TermsPage() {
         <section>
           <h2>7. Accuracy of Materials</h2>
           <p>
-            The materials appearing on PassGuard could include technical, typographical, or photographic errors. PassGuard does not warrant that any of the materials on the Service are accurate, complete, or current. PassGuard may make changes to the materials contained on the Service at any time without notice.
+            The materials appearing on ResetNow could include technical, typographical, or photographic errors. ResetNow does not warrant that any of the materials on the Service are accurate, complete, or current. ResetNow may make changes to the materials contained on the Service at any time without notice.
           </p>
         </section>
 
         <section>
           <h2>8. Materials and Content</h2>
           <p>
-            PassGuard has not reviewed all of the sites linked to its Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by PassGuard of the site. Use of any such linked web site is at the user's own risk.
+            ResetNow has not reviewed all of the sites linked to its Internet web site and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by ResetNow of the site. Use of any such linked web site is at the user's own risk.
           </p>
         </section>
 
         <section>
           <h2>9. Modifications</h2>
           <p>
-            PassGuard may revise these terms of service for its web site at any time without notice. By using this web site, you are agreeing to be bound by the then current version of these terms of service.
+            ResetNow may revise these terms of service for its web site at any time without notice. By using this web site, you are agreeing to be bound by the then current version of these terms of service.
           </p>
         </section>
 
         <section>
           <h2>10. Governing Law</h2>
           <p>
-            These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which PassGuard operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
+            These terms and conditions are governed by and construed in accordance with the laws of the jurisdiction in which ResetNow operates, and you irrevocably submit to the exclusive jurisdiction of the courts in that location.
           </p>
         </section>
 
         <section>
           <h2>11. Prohibited Activities</h2>
           <p>
-            You agree not to use PassGuard for any unlawful purposes or in any way that could damage, disable, or impair the Service. Prohibited activities include:
+            You agree not to use ResetNow for any unlawful purposes or in any way that could damage, disable, or impair the Service. Prohibited activities include:
           </p>
           <ul>
             <li>Attempting to gain unauthorized access to the Service</li>
@@ -169,7 +169,7 @@ export default function TermsPage() {
         <section>
           <h2>12. Termination</h2>
           <p>
-            PassGuard may terminate your access to the Service at any time, without notice, for violations of these Terms of Service or for any other reason at its sole discretion.
+            ResetNow may terminate your access to the Service at any time, without notice, for violations of these Terms of Service or for any other reason at its sole discretion.
           </p>
         </section>
 
@@ -179,7 +179,7 @@ export default function TermsPage() {
             If you have questions about these Terms of Service, please contact us at:
           </p>
           <p>
-            <a href="mailto:support@passguard.dev" className={styles.emailLink}>support@passguard.dev</a>
+            <a href="mailto:support@ResetNow.dev" className={styles.emailLink}>support@ResetNow.dev</a>
           </p>
           <p>
             Or visit our <Link to="/contact">Contact page</Link>.

@@ -11,13 +11,15 @@ export default function PlatformSeoPage() {
   const site = SERVICE_DB.find((s) => s.id === id)
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      const saved = localStorage.getItem('resetnow_darkmode') ?? localStorage.getItem('passguard_darkmode')
+      return saved == null ? true : saved === 'true'
     } catch {
       return true
     }
   })
 
   const steps = useMemo(() => (site ? getRecoverySteps(site) : []), [site])
+  const IconComponent = site ? SiIcons[site.icon] : null
 
   useEffect(() => {
     localStorage.setItem('resetnow_darkmode', isDarkMode)
@@ -81,7 +83,6 @@ export default function PlatformSeoPage() {
     )
   }
 
-  const IconComponent = SiIcons[site.icon]
   const reportUrl = `mailto:?subject=Broken Link Report: ${encodeURIComponent(site.name)}&body=The password reset link for ${encodeURIComponent(site.name)} appears to be broken.%0A%0AURL: ${encodeURIComponent(site.pwUrl)}%0A%0APlease describe the issue:`
 
   return (

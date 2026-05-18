@@ -1,8 +1,8 @@
-# PassGuard
+# ResetNow
 
 A modern, user-friendly password reset link aggregator for 48+ popular platforms. Find and reset your forgotten passwords quickly without searching through each platform's login page.
 
-![PassGuard](https://img.shields.io/badge/License-MIT-blue.svg)
+![ResetNow](https://img.shields.io/badge/License-MIT-blue.svg)
 ![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react)
 ![Vite](https://img.shields.io/badge/Vite-5.4.21-646CFF?logo=vite)
 
@@ -27,10 +27,10 @@ A modern, user-friendly password reset link aggregator for 48+ popular platforms
 
 ```bash
 # Clone the repository
-git clone https://github.com/jeetdevinder89/PassGuard.git
+git clone https://github.com/jeetdevinder89/ResetNow.git
 
 # Navigate to project directory
-cd PassGuard
+cd ResetNow
 
 # Install dependencies
 npm install
@@ -61,7 +61,7 @@ The production build will be in the `dist/` directory.
 ## 🏗️ Project Structure
 
 ```
-PassGuard/
+ResetNow/
 ├── src/
 │   ├── components/           # Reusable React components
 │   │   ├── SiteCard.jsx      # Individual platform card with actions
@@ -109,7 +109,7 @@ ResetNow supports password reset for 48+ platforms across categories:
 
 ## 🔐 Privacy & Security
 
-- ✅ All password reset links are verified before being added to PassGuard
+- ✅ All password reset links are verified before being added to ResetNow
 - ✅ No data is stored on our servers
 - ✅ No tracking or analytics
 - ✅ No cookies
@@ -117,7 +117,7 @@ ResetNow supports password reset for 48+ platforms across categories:
 
 ## 🤝 Contributing
 
-We welcome contributions! To help improve PassGuard:
+We welcome contributions! To help improve ResetNow:
 
 1. **Report a Bug**: Open an issue describing the problem
 2. **Add a Platform**: Submit a PR with a new platform's reset URL
@@ -161,14 +161,13 @@ To add a new platform:
 
 ## 🐛 Known Issues
 
-- Bundle size is ~5.1MB (due to react-icons/si package) - optimization in progress
 - Regional URL variants not yet supported
 - Some enterprise platforms may have additional authentication steps
 
 ## 📈 Performance
 
-- **Build Size**: ~5.1MB uncompressed JS, ~2MB gzipped
-- **Load Time**: <2s on 4G connection
+- **Build Size**: ~232 KB uncompressed JS, ~73 KB gzipped
+- **Load Time**: <1s on 4G connection
 - **Link Validation**: <9s per platform check
 
 ## 📄 License
@@ -177,7 +176,7 @@ MIT License - feel free to use ResetNow in your own projects
 
 ## 🙋 Support
 
-Found a bug or have a feature request? [Open an issue on GitHub](https://github.com/jeetdevinder89/PassGuard/issues)
+Found a bug or have a feature request? [Open an issue on GitHub](https://github.com/jeetdevinder89/ResetNow/issues)
 
 ---
 

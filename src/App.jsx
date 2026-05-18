@@ -15,14 +15,16 @@ export default function App() {
   const [selectedSite, setSelectedSite] = useState(null)
   const [favorites, setFavorites] = useState(() => {
     try {
-      return JSON.parse(localStorage.getItem('passguard_favorites') || '[]')
+      const saved = localStorage.getItem('resetnow_favorites') ?? localStorage.getItem('passguard_favorites')
+      return JSON.parse(saved || '[]')
     } catch {
       return []
     }
   })
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('passguard_darkmode') === 'true' || true
+      const saved = localStorage.getItem('resetnow_darkmode') ?? localStorage.getItem('passguard_darkmode')
+      return saved == null ? true : saved === 'true'
     } catch {
       return true
     }
@@ -38,7 +40,7 @@ export default function App() {
   }, [query, activeCategory])
 
   useEffect(() => {
-    document.title = 'PassGuard — Change Your Password on Any Website Instantly'
+    document.title = 'ResetNow — Change Your Password on Any Website Instantly'
     const description = 'Direct password reset links for 48+ popular websites with recovery guidance and link validation.'
     let meta = document.querySelector('meta[name="description"]')
     if (!meta) {

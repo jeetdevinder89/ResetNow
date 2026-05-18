@@ -11,6 +11,7 @@
   position: relative;
   overflow: hidden;
   animation: fadeInCard 0.5s ease-out;
+  height: auto;
 }
 
 @keyframes fadeInCard {

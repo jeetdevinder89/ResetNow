@@ -7,7 +7,8 @@ import styles from './InfoPage.module.css'
 export default function ContactPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('resetnow_darkmode') === 'true' || true
+      const saved = localStorage.getItem('resetnow_darkmode') ?? localStorage.getItem('passguard_darkmode')
+      return saved == null ? true : saved === 'true'
     } catch {
       return true
     }

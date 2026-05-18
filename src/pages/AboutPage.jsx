@@ -7,7 +7,8 @@ import styles from './InfoPage.module.css'
 export default function AboutPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('resetnow_darkmode') === 'true' || true
+      const saved = localStorage.getItem('resetnow_darkmode') ?? localStorage.getItem('passguard_darkmode')
+      return saved == null ? true : saved === 'true'
     } catch {
       return true
     }
@@ -42,19 +43,19 @@ export default function AboutPage() {
         <Link to="/" className={styles.backLink}>← Back to Home</Link>
         
         <div className={styles.content}>
-          <h1>About PassGuard</h1>
+          <h1>About ResetNow</h1>
         
         <section>
           <h2>Our Mission</h2>
           <p>
-            PassGuard is dedicated to helping users quickly and securely reset their passwords across 48+ popular platforms. We understand that forgotten passwords can be frustrating, and navigating through complex login pages to find the password reset option is time-consuming.
+            ResetNow is dedicated to helping users quickly and securely reset their passwords across 48+ popular platforms. We understand that forgotten passwords can be frustrating, and navigating through complex login pages to find the password reset option is time-consuming.
           </p>
         </section>
 
         <section>
           <h2>What We Do</h2>
           <p>
-            PassGuard aggregates direct links to password reset pages for the most popular websites and applications. Our goal is to:
+            ResetNow aggregates direct links to password reset pages for the most popular websites and applications. Our goal is to:
           </p>
           <ul>
             <li>Save you time by providing direct access to password reset pages</li>
@@ -96,14 +97,14 @@ export default function AboutPage() {
         <section>
           <h2>Why We Built This</h2>
           <p>
-            We noticed that many users struggle to find the password reset page when they're locked out of their accounts. Most platforms don't make it obvious where to find this feature. PassGuard solves this by curating and maintaining a list of verified, direct links to password reset pages across popular platforms.
+            We noticed that many users struggle to find the password reset page when they're locked out of their accounts. Most platforms don't make it obvious where to find this feature. ResetNow solves this by curating and maintaining a list of verified, direct links to password reset pages across popular platforms.
           </p>
         </section>
 
         <section>
           <h2>Supported Categories</h2>
           <p>
-            PassGuard supports platforms across 13+ categories including:
+            ResetNow supports platforms across 13+ categories including:
           </p>
           <ul>
             <li>Social Media</li>

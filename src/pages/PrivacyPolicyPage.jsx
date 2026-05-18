@@ -7,7 +7,8 @@ import styles from './InfoPage.module.css'
 export default function PrivacyPolicyPage() {
   const [isDarkMode, setIsDarkMode] = useState(() => {
     try {
-      return localStorage.getItem('resetnow_darkmode') === 'true' || true
+      const saved = localStorage.getItem('resetnow_darkmode') ?? localStorage.getItem('passguard_darkmode')
+      return saved == null ? true : saved === 'true'
     } catch {
       return true
     }
@@ -48,7 +49,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2>Introduction</h2>
           <p>
-            PassGuard ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, use, and disclosure when you use our website at passguard.dev (the "Service").
+            ResetNow ("we," "us," "our," or "Company") is committed to protecting your privacy. This Privacy Policy explains our practices regarding data collection, use, and disclosure when you use our website (the "Service").
           </p>
         </section>
 
@@ -57,7 +58,7 @@ export default function PrivacyPolicyPage() {
           
           <h3>1.1 Information We Do Not Collect</h3>
           <p>
-            PassGuard is designed with privacy as a core principle. We do NOT collect, store, or process:
+            ResetNow is designed with privacy as a core principle. We do NOT collect, store, or process:
           </p>
           <ul>
             <li>Personal information (names, email addresses, phone numbers)</li>
@@ -113,17 +114,17 @@ export default function PrivacyPolicyPage() {
           
           <h3>3.1 External Links</h3>
           <p>
-            PassGuard provides links to third-party password reset pages. When you click these links, you are subject to those platforms' privacy policies. We are not responsible for their data practices.
+            ResetNow provides links to third-party password reset pages. When you click these links, you are subject to those platforms' privacy policies. We are not responsible for their data practices.
           </p>
 
           <h3>3.2 No Third-Party Analytics</h3>
           <p>
-            PassGuard does not use Google Analytics, Mixpanel, or any other analytics services. We do not track your behavior or usage patterns.
+            ResetNow does not use Google Analytics, Mixpanel, or any other analytics services. We do not track your behavior or usage patterns.
           </p>
 
           <h3>3.3 No Advertising</h3>
           <p>
-            PassGuard is advertisement-free. We do not sell data to advertisers or use your information for targeted advertising.
+            ResetNow is advertisement-free. We do not sell data to advertisers or use your information for targeted advertising.
           </p>
         </section>
 
@@ -158,7 +159,7 @@ export default function PrivacyPolicyPage() {
         <section>
           <h2>6. Children's Privacy</h2>
           <p>
-            PassGuard does not knowingly collect information from children under 13 years of age. If we become aware that we have collected data from a child under 13, we will delete it immediately.
+            ResetNow does not knowingly collect information from children under 13 years of age. If we become aware that we have collected data from a child under 13, we will delete it immediately.
           </p>
         </section>
 
@@ -175,7 +176,7 @@ export default function PrivacyPolicyPage() {
             If you have questions about this Privacy Policy or our privacy practices, please contact us at:
           </p>
           <p>
-            <a href="mailto:support@passguard.dev" className={styles.emailLink}>support@passguard.dev</a>
+            <a href="mailto:support@resetnow.dev" className={styles.emailLink}>support@resetnow.dev</a>
           </p>
         </section>
 
