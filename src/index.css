@@ -98,3 +98,32 @@ p {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--muted);
 }
+
+/* ── Sidebar Ads: Flow beside grid on wide screens ────────────────────── */
+.ads-grid-wrapper {
+  display: flex;
+  gap: 16px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 24px 40px;
+  align-items: flex-start;
+}
+
+.sidebar-ad {
+  display: none;
+  width: 160px;
+  flex-shrink: 0;
+}
+
+.sidebar-ad--left  { order: -1; }
+.sidebar-ad--right { order: 1; }
+
+.grid-and-ads {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Only show ads when there's enough room (>1380px viewport) */
+@media (min-width: 1380px) {
+  .sidebar-ad { display: block; }
+}

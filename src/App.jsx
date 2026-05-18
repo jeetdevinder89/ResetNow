@@ -124,23 +124,38 @@ export default function App() {
       <div style={{ maxWidth: 1020, margin: '0 auto 8px', padding: '0 24px' }}>
         <AdSlot slot="1234567890" format="horizontal" label="Top Banner Ad" style={{ minHeight: 90 }} />
       </div>
-      <ResultsGrid
-        sites={filtered}
-        categories={CATEGORIES}
-        activeCategory={activeCategory}
-        onCategory={handleCategory}
-        onValidateAll={validateAllVisible}
-        validatingAll={validatingAll}
-        linkStatuses={linkStatuses}
-        onValidateSite={validateSite}
-        onOpenDetails={setSelectedSite}
-        favorites={favorites}
-        onToggleFavorite={toggleFavorite}
-      />
-      {/* Ad slot — above footer */}
-      <div style={{ maxWidth: 1020, margin: '0 auto 40px', padding: '0 24px' }}>
-        <AdSlot slot="0987654321" format="horizontal" label="Bottom Banner Ad" style={{ minHeight: 90 }} />
+
+      {/* Grid with left/right sidebar ads */}
+      <div className="ads-grid-wrapper">
+        <div className="sidebar-ad sidebar-ad--left">
+          <AdSlot slot="1111111111" format="vertical" label="Left Sidebar Ad" style={{ width: 160, minHeight: 600 }} />
+        </div>
+
+        <div className="grid-and-ads">
+          <ResultsGrid
+            sites={filtered}
+            categories={CATEGORIES}
+            activeCategory={activeCategory}
+            onCategory={handleCategory}
+            onValidateAll={validateAllVisible}
+            validatingAll={validatingAll}
+            linkStatuses={linkStatuses}
+            onValidateSite={validateSite}
+            onOpenDetails={setSelectedSite}
+            favorites={favorites}
+            onToggleFavorite={toggleFavorite}
+          />
+          {/* Ad slot — below grid, above footer */}
+          <div style={{ margin: '24px 0 0' }}>
+            <AdSlot slot="0987654321" format="horizontal" label="Bottom Banner Ad" style={{ minHeight: 90, width: '100%' }} />
+          </div>
+        </div>
+
+        <div className="sidebar-ad sidebar-ad--right">
+          <AdSlot slot="2222222222" format="vertical" label="Right Sidebar Ad" style={{ width: 160, minHeight: 600 }} />
+        </div>
       </div>
+
       <PlatformDrawer
         site={selectedSite}
         status={selectedSite ? linkStatuses[selectedSite.id] : null}

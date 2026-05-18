@@ -1,9 +1,7 @@
 import { useEffect, useRef } from 'react'
 import styles from './AdSlot.module.css'
 
-// Replace with your actual AdSense Publisher ID after approval
-// Get it from: https://www.google.com/adsense → Account → Account information
-const PUBLISHER_ID = 'ca-pub-XXXXXXXXXXXXXXXX'
+const PUBLISHER_ID = 'ca-pub-2770089511325323'
 
 export default function AdSlot({ slot = '0000000000', format = 'auto', style = {}, label = 'Advertisement' }) {
   const pushed = useRef(false)
