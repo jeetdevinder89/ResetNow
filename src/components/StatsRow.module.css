@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  max-width: 900px;
+  margin: 0 auto 8px;
+  padding: 0 20px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+}
+
+.num { font-size: 2rem; font-weight: 800; }
+.label { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+
+.primary { color: var(--primary); }
+.success { color: var(--success); }
+.warning { color: var(--warning); }
+.safe    { color: #4ade80; }
+

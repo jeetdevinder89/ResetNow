@@ -1,0 +1,41 @@
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 15, 26, 0.92);
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  font-size: .75rem;
+  font-weight: 900;
+  background: var(--primary);
+  color: white;
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  letter-spacing: -.5px;
+}
+
+.badge {
+  font-size: .7rem;
+  background: var(--primary);
+  color: white;
+  padding: 3px 10px;
+  border-radius: 99px;
+  font-weight: 600;
+}

@@ -1,0 +1,22 @@
+.title { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; color: #f87171; }
+.sub   { font-size: .85rem; color: var(--muted); margin-bottom: 16px; }
+
+.detail {
+  background: rgba(239,68,68,.06);
+  border: 1px solid rgba(239,68,68,.2);
+  border-radius: 8px; padding: 16px;
+  font-size: .85rem; line-height: 1.8;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.detail strong { color: #f87171; }
+.tip { margin-top: 10px; color: var(--muted); }
+
+.actions { display: flex; justify-content: flex-end; margin-top: 20px; }
+
+.closeBtn {
+  padding: 9px 20px; border-radius: 8px;
+  background: transparent; border: 1.5px solid var(--border);
+  color: var(--muted); font-size: .85rem; font-weight: 600; cursor: pointer;
+  transition: all .2s;
+}
+.closeBtn:hover { border-color: var(--text); color: var(--text); }

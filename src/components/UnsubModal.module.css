@@ -1,0 +1,27 @@
+.title { font-size: 1.2rem; font-weight: 700; margin-bottom: 6px; }
+.sub   { font-size: .85rem; color: var(--muted); margin-bottom: 16px; }
+
+.textarea {
+  width: 100%; min-height: 200px;
+  background: var(--bg); border: 1.5px solid var(--border);
+  border-radius: 8px; color: var(--text);
+  font-size: .82rem; padding: 12px; resize: vertical;
+  outline: none; font-family: inherit; line-height: 1.6;
+}
+.textarea:focus { border-color: var(--primary); }
+
+.to { font-size: .78rem; color: var(--muted); margin-top: 8px; }
+.toAddr { color: var(--primary); }
+
+.actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 16px; justify-content: flex-end; }
+
+.btn {
+  padding: 9px 18px; border-radius: 8px;
+  font-size: .85rem; font-weight: 600;
+  cursor: pointer; transition: all .2s; border: none;
+}
+.ghost   { background: transparent; border: 1.5px solid var(--border); color: var(--muted); }
+.ghost:hover { border-color: var(--text); color: var(--text); }
+.primary { background: var(--primary); color: white; border: none; }
+.primary:hover { background: var(--primary-dark); }
+.copied  { background: var(--success); }
