@@ -11,6 +11,8 @@ export default function ResultsGrid({
   linkStatuses,
   onValidateSite,
   onOpenDetails,
+  favorites,
+  onToggleFavorite,
 }) {
   return (
     <div className={styles.wrapper}>
@@ -46,6 +48,8 @@ export default function ResultsGrid({
                 status={linkStatuses[s.id]}
                 onValidate={onValidateSite}
                 onOpenDetails={onOpenDetails}
+                isFavorited={favorites.includes(s.id)}
+                onToggleFavorite={onToggleFavorite}
               />
             ))}
           </div>

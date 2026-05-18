@@ -12,6 +12,20 @@ export default function App() {
   const [linkStatuses, setLinkStatuses] = useState({})
   const [validatingAll, setValidatingAll] = useState(false)
   const [selectedSite, setSelectedSite] = useState(null)
+  const [favorites, setFavorites] = useState(() => {
+    try {
+      return JSON.parse(localStorage.getItem('passguard_favorites') || '[]')
+    } catch {
+      return []
+    }
+  })
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    try {
+      return localStorage.getItem('passguard_darkmode') === 'true' || true
+    } catch {
+      return true
+    }
+  })
 
   const filtered = useMemo(() => {
     const q = query.toLowerCase().trim()
@@ -34,8 +48,27 @@ export default function App() {
     meta.setAttribute('content', description)
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem('passguard_darkmode', isDarkMode)
+    document.documentElement.setAttribute('data-theme', isDarkMode ? 'dark' : 'light')
+  }, [isDarkMode])
+
   function handleCategory(cat) {
     setActiveCategory(cat)
+  }
+
+  function toggleFavorite(siteId) {
+    setFavorites((prev) => {
+      const updated = prev.includes(siteId)
+        ? prev.filter(id => id !== siteId)
+        : [...prev, siteId]
+      localStorage.setItem('passguard_favorites', JSON.stringify(updated))
+      return updated
+    })
+  }
+
+  function toggleDarkMode() {
+    setIsDarkMode(!isDarkMode)
   }
 
   async function validateSite(site) {
@@ -71,7 +104,7 @@ export default function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar isDarkMode={isDarkMode} onToggleDarkMode={toggleDarkMode} />
       <SearchBar
         query={query}
         onQuery={setQuery}
@@ -92,6 +125,8 @@ export default function App() {
         linkStatuses={linkStatuses}
         onValidateSite={validateSite}
         onOpenDetails={setSelectedSite}
+        favorites={favorites}
+        onToggleFavorite={toggleFavorite}
       />
       <PlatformDrawer
         site={selectedSite}
