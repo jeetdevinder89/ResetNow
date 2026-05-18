@@ -26,22 +26,24 @@ export default function SiteCard({ site, status, onValidate, onOpenDetails, isFa
 
   return (
     <div className={styles.card}>
-      <div className={styles.top}>
-        <div className={styles.icon} style={{ background: site.color }}>
-          {IconComponent ? <IconComponent color="white" size={24} /> : <span>{site.name[0]}</span>}
+      <div className={styles.header}>
+        <div className={styles.top}>
+          <div className={styles.icon} style={{ background: site.color }}>
+            {IconComponent ? <IconComponent color="white" size={24} /> : <span>{site.name[0]}</span>}
+          </div>
+          <div className={styles.info}>
+            <div className={styles.name} title={site.name}>{site.name}</div>
+            <div className={styles.category}>{site.category}</div>
+          </div>
+          <button
+            className={`${styles.favorite} ${isFavorited ? styles.favorited : ''}`}
+            onClick={() => onToggleFavorite(site.id)}
+            title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
+            aria-label="Toggle favorite"
+          >
+            <FiStar size={18} />
+          </button>
         </div>
-        <div className={styles.info}>
-          <div className={styles.name}>{site.name}</div>
-          <div className={styles.category}>{site.category}</div>
-        </div>
-        <button
-          className={`${styles.favorite} ${isFavorited ? styles.favorited : ''}`}
-          onClick={() => onToggleFavorite(site.id)}
-          title={isFavorited ? 'Remove from favorites' : 'Add to favorites'}
-          aria-label="Toggle favorite"
-        >
-          <FiStar size={18} />
-        </button>
         <span className={`${styles.status} ${styles[status || 'unknown']}`}>
           {status === 'ok' && 'Likely Working'}
           {status === 'issue' && 'Needs Review'}

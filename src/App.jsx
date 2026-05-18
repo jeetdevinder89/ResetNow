@@ -4,6 +4,7 @@ import SearchBar from './components/SearchBar'
 import StatsRow from './components/StatsRow'
 import ResultsGrid from './components/ResultsGrid'
 import PlatformDrawer from './components/PlatformDrawer'
+import Footer from './components/Footer'
 import { SERVICE_DB, CATEGORIES } from './data/services'
 
 export default function App() {
@@ -134,9 +135,7 @@ export default function App() {
         onValidate={validateSite}
         onClose={() => setSelectedSite(null)}
       />
-      <footer style={{ textAlign: 'center', padding: '32px 16px', color: 'var(--muted)', fontSize: '.85rem', borderTop: '1px solid var(--border)', marginTop: '48px' }}>
-        PassGuard &mdash; Direct password change links for 50+ platforms. No data stored. No login required.
-      </footer>
+      <Footer />
     </>
   )
 }
