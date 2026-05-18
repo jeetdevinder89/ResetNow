@@ -1,9 +1,11 @@
 ﻿import * as SiIcons from 'react-icons/si'
-import { FiStar, FiCopy } from 'react-icons/fi'
+import { FiStar, FiCopy, FiChevronDown } from 'react-icons/fi'
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import styles from './SiteCard.module.css'
 
 export default function SiteCard({ site, status, onValidate, onOpenDetails, isFavorited, onToggleFavorite }) {
+  const [isExpanded, setIsExpanded] = useState(false)
   const IconComponent = SiIcons[site.icon]
 
   const reportUrl = `mailto:?subject=Broken Link Report: ${encodeURIComponent(site.name)}&body=The password reset link for ${encodeURIComponent(site.name)} appears to be broken.%0A%0AURL: ${encodeURIComponent(site.pwUrl)}%0A%0APlease describe the issue:`
@@ -52,7 +54,7 @@ export default function SiteCard({ site, status, onValidate, onOpenDetails, isFa
         </span>
       </div>
 
-      <div className={styles.actions}>
+      <div className={styles.mainActions}>
         <a
           className={`${styles.btn} ${styles.primary}`}
           href={site.pwUrl}
@@ -64,23 +66,38 @@ export default function SiteCard({ site, status, onValidate, onOpenDetails, isFa
         <button className={`${styles.btn} ${styles.secondary}`} onClick={handleCopyLink}>
           <FiCopy size={14} style={{ marginRight: '4px' }} /> Copy Link
         </button>
-        <button className={`${styles.btn} ${styles.secondary}`} onClick={() => onValidate(site)}>
-          Validate Link
-        </button>
-        <button className={`${styles.btn} ${styles.secondary}`} onClick={() => onOpenDetails(site)}>
-          View Recovery Steps
-        </button>
-        <Link className={`${styles.btn} ${styles.secondary}`} to={`/platform/${site.id}`}>
-          SEO Guide Page
-        </Link>
-        <a
-          className={`${styles.btn} ${styles.report}`}
-          href={reportUrl}
-          title="Report if this link is broken"
-        >
-          &#9888; Broken link?
-        </a>
       </div>
+
+      {isExpanded && (
+        <div className={styles.expandedActions}>
+          <button className={`${styles.btn} ${styles.secondary}`} onClick={() => onValidate(site)}>
+            Validate Link
+          </button>
+          <button className={`${styles.btn} ${styles.secondary}`} onClick={() => onOpenDetails(site)}>
+            View Recovery Steps
+          </button>
+          <Link className={`${styles.btn} ${styles.secondary}`} to={`/platform/${site.id}`}>
+            SEO Guide Page
+          </Link>
+          <a
+            className={`${styles.btn} ${styles.report}`}
+            href={reportUrl}
+            title="Report if this link is broken"
+          >
+            &#9888; Broken link?
+          </a>
+        </div>
+      )}
+
+      <button
+        className={`${styles.expandBtn} ${isExpanded ? styles.expanded : ''}`}
+        onClick={() => setIsExpanded(!isExpanded)}
+        title={isExpanded ? 'Collapse' : 'Click to expand more options'}
+        aria-label="Toggle more options"
+      >
+        <FiChevronDown size={18} />
+        <span>{isExpanded ? 'Less' : 'More'}</span>
+      </button>
     </div>
   )
 }
