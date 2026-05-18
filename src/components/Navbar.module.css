@@ -2,67 +2,103 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 32px;
+  padding: 18px 40px;
   border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
   background: rgba(15, 15, 26, 0.92);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.3s ease;
+}
+
+.nav:hover {
+  border-bottom-color: rgba(99, 102, 241, 0.3);
 }
 
 .logo {
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--primary);
+  font-size: 1.35rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
+  letter-spacing: -0.5px;
 }
 
 .logoIcon {
-  font-size: .75rem;
+  font-size: 0.75rem;
   font-weight: 900;
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
-  width: 32px; height: 32px;
-  border-radius: 8px;
-  display: flex; align-items: center; justify-content: center;
-  letter-spacing: -.5px;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: -0.5px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.logoIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
 }
 
 .right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 18px;
 }
 
 .themeToggle {
-  width: 36px;
-  height: 36px;
+  width: 40px;
+  height: 40px;
   border: 1.5px solid var(--border);
   background: transparent;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--text);
-  transition: all .2s;
+  transition: all 0.3s ease;
   padding: 0;
+  font-size: 1.1rem;
 }
 
 .themeToggle:hover {
   border-color: var(--primary);
   color: var(--primary);
-  background: rgba(99,102,241,.08);
+  background: rgba(99, 102, 241, 0.1);
+  transform: rotate(20deg) scale(1.05);
+}
+
+.themeToggle:active {
+  transform: rotate(20deg) scale(0.95);
 }
 
 .badge {
-  font-size: .7rem;
-  background: var(--primary);
+  font-size: 0.75rem;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
   color: white;
-  padding: 3px 10px;
-  border-radius: 99px;
-  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  border: 1.5px solid transparent;
+}
+
+.badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
 }

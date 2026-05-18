@@ -1,88 +1,119 @@
 .footer {
   background: var(--card2);
-  border-top: 1px solid var(--border);
-  margin-top: 64px;
-  padding: 48px 32px 24px;
+  border-top: 1.5px solid var(--border);
+  margin-top: 80px;
+  padding: 60px 40px 32px;
   color: var(--text);
+  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .content {
-  max-width: 1200px;
-  margin: 0 auto 32px;
+  max-width: 1280px;
+  margin: 0 auto 40px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+.section {
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .section h4 {
-  font-size: 0.95rem;
-  font-weight: 700;
-  margin-bottom: 12px;
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 16px;
   color: var(--primary);
+  letter-spacing: -0.3px;
 }
 
 .section p {
-  font-size: 0.85rem;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
 }
 
 .section a {
-  color: var(--primary);
+  color: var(--muted);
   text-decoration: none;
-  transition: color 0.2s;
+  transition: all 0.3s ease;
+  font-weight: 500;
 }
 
 .section a:hover {
-  color: var(--primary-dark);
-  text-decoration: underline;
+  color: var(--primary);
+  transform: translateX(2px);
 }
 
 .nav {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .nav a {
-  font-size: 0.85rem;
-  font-weight: 500;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  border-bottom-color: var(--primary);
+  padding-left: 4px;
 }
 
 .bottom {
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding-top: 24px;
-  border-top: 1px solid var(--border);
+  padding-top: 32px;
+  border-top: 1.5px solid var(--border);
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   color: var(--muted);
+  font-weight: 500;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 768px) {
   .footer {
-    padding: 32px 16px 16px;
+    padding: 40px 24px 24px;
+    margin-top: 60px;
   }
 
   .content {
-    gap: 24px;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    margin-bottom: 24px;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    margin-bottom: 32px;
   }
 
   .section h4 {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    margin-bottom: 14px;
   }
 
   .section p {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
 
   .nav a {
-    font-size: 0.8rem;
+    font-size: 0.82rem;
   }
 
   .bottom {
-    font-size: 0.75rem;
+    font-size: 0.78rem;
+    padding-top: 24px;
   }
 }

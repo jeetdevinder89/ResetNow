@@ -1,25 +1,96 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 16px;
-  max-width: 900px;
-  margin: 0 auto 8px;
-  padding: 0 20px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 18px;
+  max-width: 950px;
+  margin: 0 auto 16px;
+  padding: 0 24px;
+  animation: slideUp 0.6s ease-out 0.2s both;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .card {
   background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 20px;
+  border: 1.5px solid var(--border);
+  border-radius: 14px;
+  padding: 28px 20px;
   text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
 }
 
-.num { font-size: 2rem; font-weight: 800; }
-.label { font-size: .78rem; color: var(--muted); margin-top: 4px; }
+.card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 100px;
+  height: 100px;
+  background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--primary);
+  transform: translateY(-6px);
+  box-shadow: 0 12px 32px rgba(99, 102, 241, 0.15);
+}
+
+.card:hover::before {
+  opacity: 0.1;
+}
+
+.num { 
+  font-size: 2.4rem; 
+  font-weight: 900;
+  letter-spacing: -1px;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .num {
+  transform: scale(1.1);
+}
+
+.label { 
+  font-size: 0.85rem; 
+  color: var(--muted);
+  margin-top: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
 
 .primary { color: var(--primary); }
 .success { color: var(--success); }
 .warning { color: var(--warning); }
-.safe    { color: #4ade80; }
+.safe { color: #22c55e; }
+
+@media (max-width: 640px) {
+  .grid {
+    gap: 12px;
+    padding: 0 16px;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  }
+  
+  .card {
+    padding: 20px 16px;
+  }
+  
+  .num {
+    font-size: 1.8rem;
+  }
+}
 
